@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@+id/collegeStudyFragment"
+    android:id="@+id/nav_colleges">
+
+    <fragment
+        android:id="@+id/collegeStudyFragment"
+        android:name="com.example.universities.view.fragment.study.CollegeStudyFragment"
+        android:label="@string/menu_colleges"
+        tools:layout="@layout/fragment_college_study" >
+        <action
+            android:id="@+id/action_collegeStudyFragment_to_detailStudyFragment"
+            app:destination="@id/detailStudyFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailStudyFragment"
+        android:name="com.example.universities.view.fragment.study.DetailStudyFragment"
+        android:label="fragment_detail_study"
+        tools:layout="@layout/fragment_detail_study" />
+</navigation>

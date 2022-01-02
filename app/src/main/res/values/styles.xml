@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--green button-->
+    <style name="detail_button">
+        <item name="android:layout_width">400dp</item>
+        <item name="android:layout_height">55dp</item>
+        <item name="cornerRadius">20dp</item>
+        <item name="android:textAppearance">@android:style/TextAppearance.DeviceDefault</item>
+        <item name="android:layout_marginLeft">@dimen/fragment_layout_margin</item>
+        <item name="android:layout_marginRight">@dimen/fragment_layout_margin</item>
+        <item name="android:layout_marginTop">20dp</item>
+    </style>
+</resources>

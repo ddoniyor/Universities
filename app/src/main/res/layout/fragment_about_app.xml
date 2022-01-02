@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.fragment.settings.AboutAppFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/fragment_about_app_logo"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:src="@drawable/abiturientlog"
+                android:scaleX="2"
+                android:scaleY="2"
+               android:layout_marginTop="10dp"
+                />
+            <TextView
+                android:id="@+id/fragment_about_app_description"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/about_fragment_description"
+                android:layout_marginLeft="@dimen/fragment_layout_margin"
+                android:layout_marginRight="@dimen/fragment_layout_margin"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:layout_below="@+id/fragment_about_app_logo"
+                android:layout_marginTop="20dp"
+                />
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</FrameLayout>

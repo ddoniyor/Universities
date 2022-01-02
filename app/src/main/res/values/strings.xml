@@ -1,0 +1,46 @@
+<resources>
+    <string name="app_name">Абитуриент ТЧ</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+
+    <!--navigation drawer-->
+    <string name="menu_settings">Настройки</string>
+    <string name="menu_about_app">О приложении</string>
+    <string name="menu_where_to_study">Где учиться?</string>
+    <string name="menu_universities">Университеты</string>
+    <string name="menu_colleges">Колледжи</string>
+    <string name="menu_who_to_study_for">На кого учиться?</string>
+    <string name="menu_in_universities">В университетах</string>
+    <string name="menu_in_colleges">В колледжах</string>
+    <string name="menu_favourite">Избранные</string>
+
+    <!--about fragment-->
+    <string name="about_fragment_description">
+        Приложение несет ознакомительный характер.
+        В приложении можно посмотреть и прочитать про образовательные учреждение республики Таджикистан, а именно про вузы и колледжи страны.
+        Помимо этого можно прочитать про профессии которые существуют.
+    </string>
+
+    <!--settings fragment-->
+    <!--settings array list-->
+    <string-array name="settings">
+        <item>Оставить отзыв</item>
+        <item>Оценить приложение</item>
+        <item>О приложении</item>
+    </string-array>
+    <string name="settings_fragment_feedback_app">Отзыв к приложению Абитуриент ТЧ</string>
+    <string name="settings_fragment_choose_method">Выберите способ...</string>
+    <string name="settings_fragment_owner_email">mailto: donik.ganiev05@gmail.com</string>
+
+    <!--item detail-->
+    <string name="item_detail_coordinates">Расположение на карте</string>
+    <string name="item_detail_phone_number">Номер телефона</string>
+    <string name="item_detail_email">Электронная почта</string>
+
+    <!--lorem ipsum-->
+    <string name="lorem_ipsum">Lorem Ipsum, Lorem Ipsum, Lorem Ipsum, Lorem Ipsum, Lorem Ipsum, Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum, Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum, Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum, Lorem Ipsum, Lorem Ipsum, Lorem Ipsum, Lorem Ipsum, Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum, Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum, Lorem IpsuLorem Ipsum, Lorem Ipsum, Lorem Ipsum, Lorem Ipsum, Lorem Ipsum, Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum, Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum, Lorem IpsuLorem Ipsum, Lorem Ipsum, Lorem Ipsum, Lorem Ipsum, Lorem Ipsum, Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum, Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum, Lorem IpsuLorem Ipsum, Lorem Ipsum, Lorem Ipsum, Lorem Ipsum, Lorem Ipsum, Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum, Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum, Lorem Ipsu</string>
+
+</resources>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:icon="@drawable/ic_menu_study"
+            android:title="@string/menu_where_to_study"
+            />
+        <item
+            android:id="@+id/nav_universities"
+            android:title="@string/menu_universities" />
+        <item
+            android:id="@+id/nav_colleges"
+            android:title="@string/menu_colleges" />
+
+        <item
+            android:icon="@drawable/ic_menu_work"
+            android:title="@string/menu_who_to_study_for"
+
+            />
+        <item
+            android:id="@+id/nav_in_universities"
+            android:title="@string/menu_in_universities" />
+        <item
+            android:id="@+id/nav_in_colleges"
+            android:title="@string/menu_in_colleges" />
+
+        <item
+            android:id="@+id/nav_favourite"
+            android:title="@string/menu_favourite"/>
+
+    </group>
+</menu>
