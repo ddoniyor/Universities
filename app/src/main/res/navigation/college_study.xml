@@ -11,12 +11,10 @@
         android:label="@string/menu_colleges"
         tools:layout="@layout/fragment_college_study" >
         <action
-            android:id="@+id/action_collegeStudyFragment_to_detailStudyFragment"
-            app:destination="@id/detailStudyFragment" />
+            android:id="@+id/action_collegeStudyFragment_to_institutions_detail"
+            app:destination="@id/institutions_detail" />
     </fragment>
-    <fragment
-        android:id="@+id/detailStudyFragment"
-        android:name="com.example.universities.view.fragment.study.DetailStudyFragment"
-        android:label="fragment_detail_study"
-        tools:layout="@layout/fragment_detail_study" />
+    <include app:graph="@navigation/institution_detail" />
+
+
 </navigation>

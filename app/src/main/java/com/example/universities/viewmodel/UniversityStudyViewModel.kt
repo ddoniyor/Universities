@@ -1,4 +1,7 @@
 package com.example.universities.viewmodel
 
-class UniversityStudyViewModel {
+import androidx.lifecycle.ViewModel
+import com.example.universities.data.retrofit.ApiInterface
+
+class UniversityStudyViewModel(private val apiInterface: ApiInterface) : ViewModel() {
 }

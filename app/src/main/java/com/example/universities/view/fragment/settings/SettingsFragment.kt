@@ -55,7 +55,7 @@ class SettingsFragment : Fragment(), SettingsAdapter.CallBackInterface {
     override fun settingsPosition(position: Int) {
         log("$position position")
         when(position){
-            //Оставить отзыв
+            //leave comment
             0->{
                 activity?.let {
                     val dialIntent = Intent(Intent.ACTION_SENDTO)
@@ -69,11 +69,11 @@ class SettingsFragment : Fragment(), SettingsAdapter.CallBackInterface {
                     }
                 }
             }
-            //Оценить приложение - ссылка на приложение
+            //rate app - app link
             1->{
 
             }
-            //О приложении
+            //about app
             2->{
                 if (findNavController().currentDestination?.id == R.id.settingsFragment){
                     findNavController().navigate(R.id.action_settingsFragment_to_aboutAppFragment)

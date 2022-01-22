@@ -11,12 +11,9 @@
         android:label="@string/menu_universities"
         tools:layout="@layout/fragment_university_study" >
         <action
-            android:id="@+id/action_universityStudyFragment_to_detailStudyFragment2"
-            app:destination="@id/detailStudyFragment2" />
+            android:id="@+id/action_universityStudyFragment_to_institutions_detail"
+            app:destination="@id/institutions_detail" />
     </fragment>
-    <fragment
-        android:id="@+id/detailStudyFragment2"
-        android:name="com.example.universities.view.fragment.study.DetailStudyFragment"
-        android:label="fragment_detail_study"
-        tools:layout="@layout/fragment_detail_study" />
+    <include app:graph="@navigation/institution_detail" />
+
 </navigation>

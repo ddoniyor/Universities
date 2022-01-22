@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.fragment.search.SearchFragment">
+
+    <LinearLayout
+        android:id="@+id/fragment_search_linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/fragment_search_linear_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/white"
+            >
+
+
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/fragment_search_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:closeIcon="@drawable/ic_clear_icon"
+                app:iconifiedByDefault="false"
+                app:searchIcon="@null"
+                android:searchHintIcon="@null"
+                android:singleLine="true"
+                android:background="@android:color/transparent"
+                android:queryBackground="@android:color/transparent"
+                app:queryBackground="@android:color/transparent"
+                app:defaultQueryHint="Поиск по учреждениям ..."
+
+                />
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:elevation="50dp"
+                android:background="@drawable/toolbar_shadow"
+                />
+        </FrameLayout>
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/fragment_search_progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        />
+
+    <TextView
+        android:id="@+id/search_fragment_message_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_margin="40dp"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/fragment_search_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:layout_below="@+id/fragment_search_linear"
+        />
+
+</RelativeLayout>

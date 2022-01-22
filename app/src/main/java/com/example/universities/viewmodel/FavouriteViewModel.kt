@@ -1,4 +1,8 @@
 package com.example.universities.viewmodel
 
-class FavouriteViewModel {
+import androidx.lifecycle.ViewModel
+import com.example.universities.data.retrofit.ApiInterface
+
+class FavouriteViewModel(private val apiInterface: ApiInterface) : ViewModel() {
+
 }

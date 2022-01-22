@@ -3,6 +3,7 @@ package com.example.universities
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.navigation.NavigationView
 import androidx.navigation.findNavController
@@ -37,9 +38,18 @@ class MainActivity : AppCompatActivity() {
         // menu should be considered as top level destinations.
         appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.nav_universities, R.id.nav_colleges, R.id.nav_in_universities,R.id.nav_in_colleges,R.id.nav_favourite
+                R.id.nav_universities, R.id.nav_colleges,R.id.nav_favourite ,R.id.nav_search, R.id.nav_in_universities,R.id.nav_in_colleges
             ), drawerLayout
         )
+        navController.addOnDestinationChangedListener { _, destination, _ ->
+            if (destination.id == R.id.searchFragment
+
+            ) {
+                binding.appBarMain.toolbar.visibility = View.GONE
+            } else {
+                binding.appBarMain.toolbar.visibility  = View.VISIBLE
+            }
+        }
 
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)

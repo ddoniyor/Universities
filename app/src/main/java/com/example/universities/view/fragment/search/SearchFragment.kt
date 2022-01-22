@@ -1,4 +1,4 @@
-package com.example.universities.view.fragment.study
+package com.example.universities.view.fragment.search
 
 import android.os.Bundle
 import android.util.Log
@@ -7,37 +7,32 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
-import androidx.navigation.fragment.findNavController
 import com.example.universities.R
 import com.example.universities.data.retrofit.RetrofitBuilder
-import com.example.universities.databinding.FragmentCollegeStudyBinding
+import com.example.universities.databinding.FragmentFavoritesBinding
 import com.example.universities.databinding.FragmentSearchBinding
-import com.example.universities.databinding.FragmentSettingsBinding
-import com.example.universities.viewmodel.CollegeStudyViewModel
 import com.example.universities.viewmodel.SearchViewModel
-import com.example.universities.viewmodel.factory.CollegeStudyFactory
+import com.example.universities.viewmodel.factory.SearchFactory
 
 
-class CollegeStudyFragment : Fragment() {
-
+class SearchFragment : Fragment() {
     private companion object{
-        const val TAG = "College Study Fragment"
+        const val TAG = "Search Fragment"
     }
     private fun log(message: String) {
         Log.d(TAG, message)
     }
-
-    private var _binding: FragmentCollegeStudyBinding? = null
+    private var _binding: FragmentSearchBinding? = null
     private val binding get() = _binding!!
-    private lateinit var collegeStudyViewModel: CollegeStudyViewModel
+    private lateinit var searchViewModel :SearchViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         log("onCreateView")
-        setUpCollegeStudyViewModel()
-        _binding = FragmentCollegeStudyBinding.inflate(inflater, container, false)
+        setUpSearchViewModel()
+        _binding = FragmentSearchBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -45,17 +40,18 @@ class CollegeStudyFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
     }
-    private fun setUpCollegeStudyViewModel(){
-        collegeStudyViewModel = ViewModelProvider(
+
+    private fun setUpSearchViewModel(){
+        searchViewModel = ViewModelProvider(
             this,
-            CollegeStudyFactory(RetrofitBuilder().getApiInterface(requireContext()))
-        )[CollegeStudyViewModel::class.java]
+            SearchFactory(RetrofitBuilder().getApiInterface(requireContext()))
+        )[SearchViewModel::class.java]
     }
+
     override fun onDestroyView() {
         log("onDestroyView")
         super.onDestroyView()
         _binding = null
     }
-
 
 }

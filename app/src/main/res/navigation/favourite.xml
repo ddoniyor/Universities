@@ -5,10 +5,17 @@
     app:startDestination="@+id/favouriteFragment"
     android:id="@+id/nav_favourite">
 
-
     <fragment
         android:id="@+id/favouriteFragment"
-        android:name="com.example.universities.view.fragment.favorite.FavoriteFragment"
+        android:name="com.example.universities.view.fragment.favorites.FavoritesFragment"
         android:label="@string/menu_favourite"
-        tools:layout="@layout/fragment_favorite" />
+        tools:layout="@layout/fragment_favorites" >
+        <action
+            android:id="@+id/action_favouriteFragment_to_institutions_detail"
+            app:destination="@id/institutions_detail" />
+    </fragment>
+
+    <include app:graph="@navigation/institution_detail" />
+
+
 </navigation>

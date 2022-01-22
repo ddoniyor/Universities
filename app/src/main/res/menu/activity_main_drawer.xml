@@ -14,6 +14,13 @@
         <item
             android:id="@+id/nav_colleges"
             android:title="@string/menu_colleges" />
+        <item
+            android:id="@+id/nav_favourite"
+            android:title="@string/menu_favourite"/>
+        <item
+            android:id="@+id/nav_search"
+            android:title="@string/menu_search"
+            />
 
         <item
             android:icon="@drawable/ic_menu_work"
@@ -27,9 +34,7 @@
             android:id="@+id/nav_in_colleges"
             android:title="@string/menu_in_colleges" />
 
-        <item
-            android:id="@+id/nav_favourite"
-            android:title="@string/menu_favourite"/>
+
 
     </group>
 </menu>

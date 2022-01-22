@@ -11,5 +11,5 @@
     <include app:graph="@navigation/university_work" />
     <include app:graph="@navigation/college_work" />
     <include app:graph="@navigation/favourite" />
-
+    <include app:graph ="@navigation/search"/>
 </navigation>
