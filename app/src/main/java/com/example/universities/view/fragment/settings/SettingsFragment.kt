@@ -34,20 +34,17 @@ class SettingsFragment : Fragment(), SettingsAdapter.CallBackInterface {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        log("onCreateView")
         _binding = FragmentSettingsBinding.inflate(inflater, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        log("onViewCreated")
         settingsAdapter = SettingsAdapter(this)
         settingsAdapter.setSettingsList(settings)
         binding.settingsFragmentRecycler.adapter = settingsAdapter
     }
     override fun onDestroyView() {
-        log("onDestroyView")
         super.onDestroyView()
         _binding = null
     }

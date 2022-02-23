@@ -11,7 +11,6 @@ class RetrofitBuilder {
 
     fun getApiInterface(context: Context): ApiInterface {
         if (!::apiInterface.isInitialized) {
-
             val retrofit = Retrofit.Builder()
                 .baseUrl(App.resourses.getString(R.string.base_url))
                 .addConverterFactory(GsonConverterFactory.create())

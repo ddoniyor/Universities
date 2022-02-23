@@ -18,8 +18,6 @@
             android:layout_height="?attr/actionBarSize"
             android:background="@color/white"
             >
-
-
             <androidx.appcompat.widget.SearchView
                 android:id="@+id/fragment_search_edit_text"
                 android:layout_width="match_parent"

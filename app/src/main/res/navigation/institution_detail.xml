@@ -10,5 +10,15 @@
         android:id="@+id/institutionDetailFragment"
         android:name="com.example.universities.view.fragment.study.InstitutionDetailFragment"
         android:label="@string/menu_institution_detail"
-        tools:layout="@layout/fragment_detail_institution" />
+        tools:layout="@layout/fragment_detail_institution" >
+        <action
+            android:id="@+id/action_institutionDetailFragment_to_facultiesFragment"
+            app:destination="@id/facultiesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/facultiesFragment"
+        android:name="com.example.universities.view.fragment.study.FacultiesFragment"
+        android:label="@string/menu_institution_detail_faculties"
+        tools:layout="@layout/fragment_faculties" />
+
 </navigation>

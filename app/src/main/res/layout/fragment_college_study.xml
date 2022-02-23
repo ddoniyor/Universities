@@ -6,18 +6,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".view.fragment.study.CollegeStudyFragment">
 
-    <TextView
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/fragment_college_study_swipe_refresh"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="college study"
-        android:gravity="center"
-        android:textSize="20sp"
-        />
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/fragment_college_study_recycler"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        />
+        >
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/fragment_college_study_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            />
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
 </RelativeLayout>

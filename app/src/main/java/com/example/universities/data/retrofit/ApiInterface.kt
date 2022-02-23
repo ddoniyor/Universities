@@ -1,4 +1,24 @@
 package com.example.universities.data.retrofit
 
+import com.example.universities.data.model.Institutions
+import retrofit2.Call
+import retrofit2.http.GET
+import retrofit2.http.Path
+import retrofit2.http.Query
+
 interface ApiInterface {
+
+    @GET("api/v1/institution/all/t")
+    fun getAllUniversities(): Call<List<Institutions.Institution>>
+
+    @GET("api/v1/institution/all/f")
+    fun getAllColleges(): Call<List<Institutions.Institution>>
+
+    @GET("api/v1/institution/{id}")
+    fun getInstitutionDetail(@Path("id") id: Int): Call<Institutions.InstitutionDetail>
+
+    @GET("api/v1/search")
+    fun searchInstitutions(@Query("query") query: String): Call<Institutions.InstitutionsSearchList>
+
+
 }

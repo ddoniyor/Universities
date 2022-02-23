@@ -31,7 +31,6 @@ class FavoritesFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        log("onCreateView")
         setUpFavoriteViewModel()
         _binding = FragmentFavoritesBinding.inflate(inflater, container, false)
         return binding.root
@@ -49,7 +48,6 @@ class FavoritesFragment : Fragment() {
     }
 
     override fun onDestroyView() {
-        log("onDestroyView")
         super.onDestroyView()
         _binding = null
     }

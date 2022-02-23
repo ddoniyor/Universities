@@ -30,7 +30,6 @@ class UniversityWorkFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        log("onCreateView")
         setUpUniversityWorkViewModel()
         _binding = FragmentUniversityWorkBinding.inflate(inflater, container, false)
         return binding.root
@@ -48,7 +47,6 @@ class UniversityWorkFragment : Fragment() {
     }
 
     override fun onDestroyView() {
-        log("onDestroyView")
         super.onDestroyView()
         _binding = null
     }

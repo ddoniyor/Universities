@@ -1,7 +1,9 @@
 <resources>
     <string name="app_name">Абитуриент ТЧ</string>
-    <string name="base_url">https://heroku/api/</string>
+    <string name="base_url">https://institutional-enrollee.herokuapp.com/</string>
+    <string name="base_url_for_photo">https://drive.google.com/uc?id=</string>
 
+    <string name="unknown_message">Неизвестно</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">Android Studio</string>
@@ -20,6 +22,8 @@
     <string name="menu_favourite">Избранные</string>
     <string name="menu_search">Поиск</string>
     <string name="menu_institution_detail">Об учреждении</string>
+    <string name="menu_institution_detail_faculties">Факультеты</string>
+
     <!--about fragment-->
     <string name="about_fragment_description">
         Приложение несет ознакомительный характер.
@@ -43,9 +47,20 @@
     <string name="item_detail_phone_number">Номер телефона</string>
     <string name="item_detail_email">Электронная почта</string>
     <string name="item_detail_web_site">Сайт</string>
+    <string name="item_detail_faculties">Факультеты</string>
 
     <!--lorem ipsum-->
     <string name="lorem_ipsum">Lorem Ipsum, Lorem Ipsum, Lorem Ipsum, Lorem Ipsum, Lorem Ipsum, Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum, Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum, Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum, Lorem Ipsum, Lorem Ipsum, Lorem Ipsum, Lorem Ipsum, Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum, Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum, Lorem IpsuLorem Ipsum, Lorem Ipsum, Lorem Ipsum, Lorem Ipsum, Lorem Ipsum, Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum, Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum, Lorem IpsuLorem Ipsum, Lorem Ipsum, Lorem Ipsum, Lorem Ipsum, Lorem Ipsum, Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum, Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum, Lorem IpsuLorem Ipsum, Lorem Ipsum, Lorem Ipsum, Lorem Ipsum, Lorem Ipsum, Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum, Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum, Lorem Ipsu</string>
+
+    <!--response handler-->
+    <string name="not_found_error_message">Не найден</string>
+    <string name="network_error_message">Проверьте подключение к сети.</string>
+    <string name="remote_error_message">Сервер недоступен, пожалуйста попробуйте позже.</string>
+    <string name="unknown_error_message">Неизвестная ошибка.</string>
+
+    <!--search fragment-->
+    <string name="search_fragment_nothing_find">По данному слову ничего не найдено.</string>
+    <string name="search_fragment_two_digits">Введите больше двух букв…</string>
 
 
 </resources>

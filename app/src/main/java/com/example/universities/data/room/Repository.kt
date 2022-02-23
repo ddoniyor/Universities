@@ -10,6 +10,5 @@ class Repository {
             return AppDatabase.getInstance(context)
         }
 
-
     }
 }
