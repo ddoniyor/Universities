@@ -1,5 +1,6 @@
 package com.example.universities.data.retrofit
 
+import com.example.universities.data.model.General
 import com.example.universities.data.model.Institutions
 import retrofit2.Call
 import retrofit2.http.GET
@@ -20,5 +21,12 @@ interface ApiInterface {
     @GET("api/v1/search")
     fun searchInstitutions(@Query("query") query: String): Call<Institutions.InstitutionsSearchList>
 
+    @GET("api/v1/institution/faculty/{id}")
+    fun getInstitutionFaculties(@Path("id") id: Int):Call<List<General.GeneralItem>>
 
+    @GET("api/v1/institution/profession/f")
+    fun getCollegeProfessions():Call<List<General.GeneralItem>>
+
+    @GET("api/v1/institution/profession/t")
+    fun getUniversityProfessions():Call<List<General.GeneralItem>>
 }

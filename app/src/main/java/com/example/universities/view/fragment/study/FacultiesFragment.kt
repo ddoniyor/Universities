@@ -5,14 +5,18 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import com.example.universities.R
 import com.example.universities.data.retrofit.RetrofitBuilder
 import com.example.universities.databinding.FragmentCollegeStudyBinding
 import com.example.universities.databinding.FragmentFacultiesBinding
+import com.example.universities.view.adapter.GeneralListAdapter
 import com.example.universities.viewmodel.InstitutionDetailViewModel
 import com.example.universities.viewmodel.factory.InstitutionDetailFactory
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
 class FacultiesFragment : Fragment() {
     private companion object{
@@ -25,14 +29,15 @@ class FacultiesFragment : Fragment() {
     private var _binding: FragmentFacultiesBinding? = null
     private val binding get() = _binding!!
     private lateinit var institutionDetailViewModel :InstitutionDetailViewModel
-
+    private lateinit var generalListAdapter: GeneralListAdapter
+    private var institutionId:Int?=null
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View{
         setUpInstitutionDetailViewModel()
-        val institutionId = arguments?.getInt("institutionId")
+        institutionId = arguments?.getInt("institutionId")
         log("$institutionId institutionId")
         _binding = FragmentFacultiesBinding.inflate(inflater, container, false)
         return binding.root    }
@@ -42,6 +47,8 @@ class FacultiesFragment : Fragment() {
         getInstitutionFaculties()
         getInstitutionFacultiesResponse()
 
+        generalListAdapter = GeneralListAdapter()
+        binding.fragmentFacultiesRecycler.adapter = generalListAdapter
 
         binding.fragmentFacultiesSwipeRefresh.setOnRefreshListener {
             getInstitutionFaculties()
@@ -49,6 +56,10 @@ class FacultiesFragment : Fragment() {
     }
     private fun getInstitutionFaculties(){
         contentVisibility(false)
+        if (institutionId!=null){
+            institutionDetailViewModel.getInstitutionFaculties(institutionId!!)
+        }
+
     }
 
     private fun contentVisibility(visibility: Boolean){
@@ -62,7 +73,34 @@ class FacultiesFragment : Fragment() {
     }
     private fun getInstitutionFacultiesResponse(){
         with(institutionDetailViewModel){
+            institutionFacultiesResponse.observe(viewLifecycleOwner){faculties->
+                contentVisibility(true)
 
+                if (faculties!=null){
+                    generalListAdapter.setGeneralItems(faculties)
+                }else{
+                    MaterialAlertDialogBuilder(requireContext())
+                        .setTitle("Упс!")
+                        .setMessage("Факультеты не найдены :(  Вернуться назад?")
+                        .setPositiveButton("Ок") { dialog, _ ->
+                            findNavController().popBackStack()
+                            dialog.dismiss()
+                        }
+                        .show()
+                }
+
+                log("$faculties institutionFacultiesResponse")
+            }
+            institutionFacultiesBadResponse.observe(viewLifecycleOwner){badResponse->
+                contentVisibility(true)
+                Toast.makeText(requireContext(), badResponse, Toast.LENGTH_SHORT).show()
+                log("$badResponse institutionFacultiesBadResponse")
+            }
+            errorInstitutionFaculties.observe(viewLifecycleOwner){error->
+                contentVisibility(true)
+                Toast.makeText(requireContext(), error, Toast.LENGTH_SHORT).show()
+                log("$error errorInstitutionFaculties")
+            }
         }
     }
     private fun setUpInstitutionDetailViewModel() {

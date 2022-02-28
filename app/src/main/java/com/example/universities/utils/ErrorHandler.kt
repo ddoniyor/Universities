@@ -9,7 +9,10 @@ import java.io.IOException
 
 
 class ErrorHandler {
-    val TAG = "Error Handler Class"
+    companion object{
+        const val TAG= "Error Handler Class"
+    }
+
 
     fun badResponseHandler(response: Response<*>): String {
         var message:String ? = null

@@ -5,38 +5,38 @@
     android:layout_height="wrap_content">
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/item_work_card_view"
+        android:id="@+id/item_general_card_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginRight="@dimen/fragment_layout_margin"
         android:layout_marginLeft="@dimen/fragment_layout_margin"
         android:layout_marginTop="10dp"
+        android:layout_marginRight="@dimen/fragment_layout_margin"
         android:layout_marginBottom="5dp"
-        app:cardCornerRadius="15dp"
-        >
+        app:cardCornerRadius="15dp">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
             android:layout_margin="20dp"
-            >
+            android:orientation="vertical">
+
             <TextView
-                android:id="@+id/item_work_title"
+                android:id="@+id/item_general_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Здесь будет то что должно быть"
                 android:textColor="@color/black"
                 android:textSize="16sp"
-                android:textStyle="bold"
-                />
+                android:textStyle="bold" />
+
             <TextView
-                android:id="@+id/item_work_body"
+                android:id="@+id/item_general_description"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:text="Здесь будет то что должно быть Здесь будет то что должно быть Здесь будет то что  т то что должно бытдолжно быть"
-                android:textSize="14sp"
                 android:textColor="#A6000000"
+                android:textSize="14sp"
+                android:visibility="gone"
                 />
         </LinearLayout>
 

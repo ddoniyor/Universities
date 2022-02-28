@@ -18,12 +18,13 @@
         <entry key="app/src/main/res/drawable/rounded_corners_12dp.xml" value="0.2740740740740741" />
         <entry key="app/src/main/res/drawable/side_nav_bar.xml" value="0.21574074074074073" />
         <entry key="app/src/main/res/drawable/toolbar_shadow.xml" value="0.2994791666666667" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.24062164306640627" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_splash.xml" value="0.22" />
         <entry key="app/src/main/res/layout/app_bar_main.xml" value="0.15070921985815602" />
         <entry key="app/src/main/res/layout/content_main.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_about_app.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_college_study.xml" value="0.2779600757758834" />
-        <entry key="app/src/main/res/layout/fragment_college_work.xml" value="0.3296875" />
+        <entry key="app/src/main/res/layout/fragment_college_work.xml" value="0.26531829833984377" />
         <entry key="app/src/main/res/layout/fragment_detail_institution.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_detail_study.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_detail_study_fragment.xml" value="0.3446557971014493" />
@@ -37,8 +38,9 @@
         <entry key="app/src/main/res/layout/fragment_settings.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_slideshow.xml" value="0.15070921985815602" />
         <entry key="app/src/main/res/layout/fragment_university_study.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/fragment_university_work.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/fragment_university_work.xml" value="0.22714681440443213" />
         <entry key="app/src/main/res/layout/item_detail.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/item_general.xml" value="0.32488903634730487" />
         <entry key="app/src/main/res/layout/item_settings.xml" value="0.285140562248996" />
         <entry key="app/src/main/res/layout/item_study.xml" value="0.33" />
         <entry key="app/src/main/res/layout/item_work.xml" value="0.3778110944527736" />
@@ -55,5 +57,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.1" />
+      </ProjectState>
+    </option>
   </component>
 </project>

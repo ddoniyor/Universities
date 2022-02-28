@@ -6,11 +6,13 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import com.example.universities.R
 import com.example.universities.data.retrofit.RetrofitBuilder
 import com.example.universities.databinding.FragmentCollegeWorkBinding
 import com.example.universities.databinding.FragmentUniversityWorkBinding
+import com.example.universities.view.adapter.GeneralListAdapter
 import com.example.universities.viewmodel.UniversityWorkViewModel
 import com.example.universities.viewmodel.factory.UniversityWorkFactory
 
@@ -26,6 +28,8 @@ class UniversityWorkFragment : Fragment() {
     private var _binding: FragmentUniversityWorkBinding? = null
     private val binding get() = _binding!!
     private lateinit var universityWorkViewModel : UniversityWorkViewModel
+    private lateinit var generalListAdapter: GeneralListAdapter
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -37,8 +41,56 @@ class UniversityWorkFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        getUniversityProfessions()
+        getUniversityProfessionsResponse()
+
+        generalListAdapter = GeneralListAdapter()
+        binding.fragmentUniversityWorkRecycler.adapter = generalListAdapter
+
+        binding.fragmentUniversityWorkSwipeRefresh.setOnRefreshListener {
+            getUniversityProfessions()
+        }
 
     }
+
+    private fun getUniversityProfessions(){
+        contentVisibility(false)
+        universityWorkViewModel.getUniversityProfessions()
+    }
+    private fun contentVisibility(visibility: Boolean){
+        if (visibility){
+            binding.fragmentUniversityWorkRecycler.visibility = View.VISIBLE
+            binding.fragmentUniversityWorkSwipeRefresh.isRefreshing = false
+        }else{
+            binding.fragmentUniversityWorkRecycler.visibility = View.GONE
+            binding.fragmentUniversityWorkSwipeRefresh.isRefreshing = true
+        }
+    }
+    private fun getUniversityProfessionsResponse(){
+        with(universityWorkViewModel){
+            universitiesWorkResponse.observe(viewLifecycleOwner){professions->
+                contentVisibility(true)
+                if (professions!=null){
+                    generalListAdapter.setGeneralItems(professions)
+                }else{
+                    Toast.makeText(requireContext(),"Упс, список профессий пуст",Toast.LENGTH_SHORT).show()
+                }
+
+                log("$professions universitiesWorkResponse")
+            }
+            universitiesWorkBadResponse.observe(viewLifecycleOwner){badResponse->
+                contentVisibility(true)
+                Toast.makeText(requireContext(), badResponse, Toast.LENGTH_SHORT).show()
+                log("$badResponse universitiesWorkBadResponse")
+            }
+            errorUniversitiesWork.observe(viewLifecycleOwner){error->
+                contentVisibility(true)
+                Toast.makeText(requireContext(), error, Toast.LENGTH_SHORT).show()
+                log("$error errorUniversitiesWork")
+            }
+        }
+    }
+
     private fun setUpUniversityWorkViewModel(){
         universityWorkViewModel = ViewModelProvider(
             this,
