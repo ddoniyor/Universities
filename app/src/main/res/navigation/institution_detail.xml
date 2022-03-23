@@ -8,7 +8,7 @@
 
     <fragment
         android:id="@+id/institutionDetailFragment"
-        android:name="com.example.universities.view.fragment.study.InstitutionDetailFragment"
+        android:name="tj.descwn.universities.view.fragment.study.InstitutionDetailFragment"
         android:label="@string/menu_institution_detail"
         tools:layout="@layout/fragment_detail_institution" >
         <action
@@ -17,7 +17,7 @@
     </fragment>
     <fragment
         android:id="@+id/facultiesFragment"
-        android:name="com.example.universities.view.fragment.study.FacultiesFragment"
+        android:name="tj.descwn.universities.view.fragment.study.FacultiesFragment"
         android:label="@string/menu_institution_detail_faculties"
         tools:layout="@layout/fragment_faculties" />
 

@@ -8,11 +8,11 @@ android {
     compileSdk 31
 
     defaultConfig {
-        applicationId "com.example.universities"
+        applicationId "tj.descwn.universities"
         minSdk 23
         targetSdk 31
-        versionCode 1
-        versionName "1.0"
+        versionCode 2
+        versionName "1.0.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -70,4 +70,8 @@ dependencies {
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutines_version"
     // optional - Kotlin Extensions and Coroutines support for Room
     implementation "androidx.room:room-ktx:$room_version"
+
+
+    //for Google AdMob
+    implementation 'com.google.android.gms:play-services-ads:20.6.0'
 }

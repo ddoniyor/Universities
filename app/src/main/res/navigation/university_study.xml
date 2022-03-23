@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/universityStudyFragment"
-        android:name="com.example.universities.view.fragment.study.UniversityStudyFragment"
+        android:name="tj.descwn.universities.view.fragment.study.UniversityStudyFragment"
         android:label="@string/menu_universities"
         tools:layout="@layout/fragment_university_study" >
         <action

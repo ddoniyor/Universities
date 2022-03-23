@@ -6,7 +6,7 @@
     android:id="@+id/nav_in_colleges">
     <fragment
         android:id="@+id/collegeWorkFragment"
-        android:name="com.example.universities.view.fragment.work.CollegeWorkFragment"
+        android:name="tj.descwn.universities.view.fragment.work.CollegeWorkFragment"
         android:label="@string/menu_in_colleges"
         tools:layout="@layout/fragment_college_work"/>
 

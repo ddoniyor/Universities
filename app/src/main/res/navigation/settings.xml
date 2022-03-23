@@ -7,17 +7,17 @@
 
     <fragment
         android:id="@+id/settingsFragment"
-        android:name="com.example.universities.view.fragment.settings.SettingsFragment"
+        android:name="tj.descwn.universities.view.fragment.settings.SettingsFragment"
         android:label="@string/menu_settings"
         tools:layout="@layout/fragment_settings" >
-        <deepLink app:uri="android-app://com.example.universities/SettingsFragment"/>
+        <deepLink app:uri="android-app://tj.descwn.universities/SettingsFragment"/>
         <action
             android:id="@+id/action_settingsFragment_to_aboutAppFragment"
             app:destination="@id/aboutAppFragment" />
     </fragment>
     <fragment
         android:id="@+id/aboutAppFragment"
-        android:name="com.example.universities.view.fragment.settings.AboutAppFragment"
+        android:name="tj.descwn.universities.view.fragment.settings.AboutAppFragment"
         android:label="@string/menu_about_app"
         tools:layout="@layout/fragment_about_app" />
 </navigation>

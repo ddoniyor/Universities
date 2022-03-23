@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/favouriteFragment"
-        android:name="com.example.universities.view.fragment.favorites.FavoritesFragment"
+        android:name="tj.descwn.universities.view.fragment.favorites.FavoritesFragment"
         android:label="@string/menu_favourite"
         tools:layout="@layout/fragment_favorites" >
         <action
